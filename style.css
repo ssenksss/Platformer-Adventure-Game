@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    background: url('/PlatformerAdventure/src/game/background.png') no-repeat center center;
+    background-size: cover;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black;
+}
