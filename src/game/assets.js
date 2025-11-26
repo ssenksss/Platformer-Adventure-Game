@@ -1,5 +1,8 @@
+// src/game/assets.js
 export const assets = {
-    playerColor: 'blue',
-    enemyColor: 'red',
-    coinColor: 'yellow'
+    player: 'src/game/assets/witch.png',
+    enemy: 'src/game/assets/ghost.png',
+    coin: 'src/game/assets/coin.png',
+    platform: 'src/game/assets/land.png',
+    background: 'src/game/background.png'
 };

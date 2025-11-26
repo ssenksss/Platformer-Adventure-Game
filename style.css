@@ -1,20 +1,32 @@
+/* Reset margina i puni ekran */
 body {
     margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* horizontalno centriranje */
+    align-items: center;     /* vertikalno centriranje */
+    background-color: #000;  /* crna pozadina oko canvasa */
     overflow: hidden;
+    font-family: sans-serif;
 }
 
+/* Canvas centriran i sa pozadinom */
 canvas {
-    display: block;
-    background: url('/PlatformerAdventure/src/game/background.png') no-repeat center center;
+    background: url('./src/game/background.png') no-repeat center center;
     background-size: cover;
+    display: block;
+    /* opcionalno: dodati border da se vidi rub */
+    /* border: 2px solid white; */
 }
 
 #hud {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    left: 30%;
+    top: 20%;
+    transform: translate(-50%, -280%); /* pomeri gore iznad canvas-a */
     color: white;
-    font-family: sans-serif;
     font-size: 20px;
     text-shadow: 1px 1px 2px black;
+    pointer-events: none;
 }
+

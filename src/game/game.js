@@ -15,6 +15,8 @@ import { cameraSystem } from '../systems/cameraSystem.js';
 import { cleanupSystem } from '../systems/cleanupSystem.js';
 import { levels } from './levels.js';
 import { inputSystem } from '../systems/inputSystem.js';
+import { assets } from './assets.js'; // jer je game.js u src/game/
+
 
 let currentLevel = 0;
 let camera = createCamera();
@@ -32,7 +34,7 @@ export const gameLoop = (world, ctx, delta) => {
 
         world.components.position[playerId] = createPosition(150, 500);
         world.components.velocity[playerId] = createVelocity();
-        world.components.renderable[playerId] = createRenderable('blue', 32, 32);
+        world.components.renderable[playerId] = createRenderable(assets.player, 32, 32);
         world.components.collider[playerId] = createCollider(32, 32);
         world.components.playerTag[playerId] = createPlayerTag();
 
